@@ -146,6 +146,19 @@ code(for: "Additional Subscripts") {
         subscript(col col: Int) -> [T] {
             grid.map {$0[col]}
         }
+        // Versions to do by myself with guard checks (in the video, Stewart said that he leave to be done by his viewers, who want to practice)
+//        subscript(row row: Int) -> [T]? {
+//            guard row >= 0, row <= rows - 1 else {
+//                return nil
+//            }
+//            return grid[row]
+//        }
+//        subscript(col col: Int) -> [T]? {
+//            guard col >= 0, col <= cols - 1 else {
+//                return nil
+//            }
+//            return grid.map {$0[col]}
+//        }
     }
     var matrix = Matrix(rows: 3, cols: 3, defaultValue: "-")
     print(matrix.grid)
@@ -153,6 +166,9 @@ code(for: "Additional Subscripts") {
     print(matrix.grid)
     print(matrix[row: 1])
     print(matrix[col: 1])
+    // Versions to do by myself with guard checks (in the video, Stewart said that he leave to be done by his viewers, who want to practice)
+//    print(matrix[row: 1] ?? -1)
+//    print(matrix[col: 1] ?? -1)
 }
 /*:
 [< Previous](@previous)                    [Home](Introduction)                    [Next >](@next)
